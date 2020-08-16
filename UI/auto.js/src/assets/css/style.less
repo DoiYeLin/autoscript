@@ -1,0 +1,437 @@
+@font-face {
+  font-family : "qlfont";
+  font-display: swap;
+  src         : url("//at.alicdn.com/t/webfont_i1zl7wdgd9.eot");
+  /* IE9*/
+  src         : url("//at.alicdn.com/t/webfont_i1zl7wdgd9.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("//at.alicdn.com/t/webfont_i1zl7wdgd9.woff2") format("woff2"),
+    url("//at.alicdn.com/t/webfont_i1zl7wdgd9.woff") format("woff"),
+    /* chrome、firefox */
+    url("//at.alicdn.com/t/webfont_i1zl7wdgd9.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("//at.alicdn.com/t/webfont_i1zl7wdgd9.svg#阿里汉仪智能黑体") format("svg");
+  /* iOS 4.1- */
+}
+
+html,
+body {
+  background: #262626;
+
+  // *::-webkit-scrollbar {
+  //   width: 0 !important;
+  // }
+}
+
+// body::-webkit-scrollbar {
+//   width: 0 !important;
+// }
+
+#app {
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color                  : #2c3e50;
+  // overflow: hidden;
+  height                 : 100%;
+
+  >.child-view {
+    // padding-bottom: 8rem;
+  }
+
+  .van-pull-refresh {
+    .van-pull-refresh__head {
+      line-height: 100px;
+    }
+  }
+
+  .van-button {
+    border       : 0px;
+    border-radius: 0px;
+  }
+
+  .placeholder {
+    width           : 100%;
+    height          : 10px;
+    background-color: rgb(44, 58, 71);
+  }
+
+  .empty {
+    width     : 80%;
+    font-size : 14px;
+    text-align: center;
+    margin    : 0px auto;
+    color     : rgb(116, 125, 140);
+    padding   : 100px 0px;
+
+    i {
+      color    : rgb(112, 161, 255);
+      font-size: 100px;
+    }
+  }
+
+  .topShadow {
+    -webkit-box-shadow: 0 -15px 30px 0 rgba(52, 73, 94, 0.1);
+    -moz-box-shadow   : 0 -15px 30px 0 rgba(52, 73, 94, 0.1);
+    box-shadow        : 0 -15px 30px 0 rgba(52, 73, 94, 0.1);
+  }
+
+  .bottomShadow {
+    -webkit-box-shadow: 0 20px 30px -6px rgba(52, 73, 94, 0.1);
+    -moz-box-shadow   : 0 20px 30px -6px rgba(52, 73, 94, 0.1);
+    box-shadow        : 0 20px 30px -6px rgba(52, 73, 94, 0.1);
+  }
+
+  .topActions {
+    position: fixed;
+    z-index : 1;
+  }
+
+  .seldate {
+    i {
+      margin: 0px 3px;
+    }
+  }
+
+  .bigbtn {
+    width : 90%;
+    margin: 0px auto;
+  }
+
+  .van-field__control--right {
+    padding-right: 15px !important;
+  }
+
+  .card {
+    background-color          : rgb(61, 61, 61);
+    border-bottom-color       : rgb(64, 66, 70);
+    border-bottom-left-radius : 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-style       : solid;
+    border-bottom-width       : 1px;
+    border-image-outset       : initial;
+    border-image-repeat       : initial;
+    border-image-slice        : initial;
+    border-image-source       : initial;
+    border-image-width        : initial;
+    border-left-color         : rgb(27, 35, 54);
+    border-left-style         : solid;
+    border-left-width         : 1px;
+    border-right-color        : rgb(27, 35, 54);
+    border-right-style        : solid;
+    border-right-width        : 1px;
+    border-top-color          : rgb(27, 35, 54);
+    border-top-left-radius    : 4px;
+    border-top-right-radius   : 4px;
+    border-top-style          : solid;
+    border-top-width          : 1px;
+    color                     : rgb(191, 191, 191);
+    overflow-x                : hidden;
+    overflow-y                : hidden;
+    transition-delay          : 0s;
+    transition-duration       : 0.3s;
+    transition-property       : all;
+    transition-timing-function: ease;
+    box-shadow                : 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    margin                    : 10px;
+    padding                   : 15px;
+    height                    : auto;
+  }
+}
+
+.line_block {
+  width : 100%;
+  height: 10px;
+}
+
+/**
+ 通用
+ */
+
+.van-nav-bar,
+.van-tabbar,
+.van-popup,
+.van-picker {
+  background-color: rgb(47, 54, 64) !important;
+
+  * {
+    color: white !important;
+  }
+}
+
+.van-grid {
+  .van-grid-item>div {
+    background: rgb(116, 125, 140) !important;
+    border    : 1px solid #636363;
+
+    >span {
+      color: white;
+    }
+  }
+}
+
+a {
+  font-size      : 13px;
+  text-decoration: none;
+  color          : #2c3e50;
+}
+
+.animated.faster-plus {
+  animation-duration: 200ms;
+}
+
+.child-view {
+  width     : 100%;
+  position  : absolute;
+  transition: all 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.qlLoadIcon {
+  color        : rgb(206, 214, 224);
+  font-size    : 50px;
+  margin-top   : 8px;
+  border-radius: 4px;
+}
+
+.qlLoadTxt {
+  line-height: 0px;
+  margin     : 0px;
+}
+
+.loosing {
+  color: rgb(162, 155, 254);
+}
+
+.qlLoading {
+  animation-name           : skyset;
+  animation-duration       : 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(24);
+}
+
+@-webkit-keyframes skyset {
+  0% {
+    color: rgb(112, 161, 255);
+  }
+
+  50% {
+    color: rgb(83, 82, 237);
+  }
+
+  100% {
+    color: rgb(162, 155, 254);
+  }
+}
+
+.van-overlay-1 {
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  z-index         : 1;
+  width           : 100%;
+  height          : 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+// 下面时独立页面样式
+// 下面时独立页面样式
+
+#login {
+  text-align: center;
+
+  .header {
+    width : 100%;
+    height: 200px;
+
+    * {
+      width: 100%;
+    }
+
+    .block1 {
+      height: 50px;
+    }
+
+    .logo {
+      width      : 100%;
+      height     : 120px;
+      line-height: 100px;
+      margin     : 0px auto;
+
+      i {
+        font-size: 100px;
+        color    : @orange-light;
+      }
+    }
+
+    .title {
+      line-height: 100px;
+      height     : 50px;
+      color      : @orange-dark;
+      font-size  : 35px;
+      font-family: "qlfont" !important;
+    }
+  }
+
+  form {
+    .van-cell {
+      background-color: #fff0;
+
+      input {
+        color: @orange-dark;
+      }
+    }
+
+    i.van-icon {
+      color: @orange-dark;
+    }
+  }
+}
+
+#vr15 {
+  .issboxheader {
+    min-width : 1000px;
+    overflow-x: auto;
+    color     : rgb(189, 195, 199);
+    text-align: center;
+    margin    : 0px;
+    padding   : 5px 0px;
+    font-size : 14px;
+    background: #636e72;
+  }
+
+  .vc-popover-content.direction-bottom {
+    background: black;
+  }
+
+  .issbox.all-active {
+    .bs, .ds {
+      display: inline-block !important;
+    }
+  }
+  .issbox.bs-active {
+    .bs {
+      display: inline-block !important;
+    }
+  }
+  .issbox.ds-active {
+    .ds {
+      display: inline-block !important;
+    }
+  }
+
+  .issbox {
+    min-width : 1000px;
+    overflow-x: auto;
+    height    : calc(100vh - 120px);
+
+    .van-row {
+      color        : rgb(99, 110, 114);
+      text-align   : center;
+      margin       : 3px 0px;
+      padding      : 5px 0px;
+      font-size    : 14px;
+      border-bottom: 1px solid;
+    }
+
+    .bs, .ds {
+      display: none;
+    }
+
+    .van-sticky {
+      min-width: 800px;
+    }
+
+    .van-row:last-child {
+      border: 0px;
+    }
+
+    .cl1,
+    .cl2,
+    .cl3,
+    .cl4,
+    .cl5,
+    .cl6,
+    .cl7,
+    .cl8 {
+      border-radius: 50px;
+      padding      : 3px 5px;
+      color        : white;
+      font-size    : 12px;
+      line-height  : -20px;
+    }
+
+    .cl1 {
+      background: #0b638a;
+    }
+
+    .cl2 {
+      background: #7b3502;
+    }
+
+    .cl3 {
+      background: #3f7003;
+    }
+
+    .cl4 {
+      background: #0b5431;
+    }
+
+    .cl5 {
+      background: #6f6f6ffc;
+    }
+
+    .cl6 {
+      background: #614463;
+    }
+
+    .cl7 {
+      background: #713517;
+    }
+
+    .cl8 {
+      background: #565956;
+    }
+  }
+
+  .action {
+    width           : 100%;
+    height          : 40px;
+    background-color: @gray-9;
+    position        : fixed;
+    bottom          : 0px;
+    left            : 0px;
+    text-align      : center;
+
+    .van-col {
+      height     : 40px;
+      line-height: 40px;
+
+      .van-button {
+        width: 100%;
+        color: white;
+      }
+    }
+  }
+
+
+
+  .smactive {
+    position: fixed;
+    bottom  : 50px;
+    right   : 30px;
+  }
+
+  form {
+    .van-cell {
+      background-color: #fff0;
+
+      input {
+        color: @orange-dark;
+      }
+    }
+
+    i.van-icon {
+      color: @orange-dark;
+    }
+  }
+}
